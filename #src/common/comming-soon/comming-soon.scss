@@ -1,0 +1,202 @@
+.page-is-load {
+    & .comming-soon__logo {
+        transition: all 1s ease-in-out 0.4s;
+        opacity: 1;
+    }
+    & .comming-soon__subtitle {
+        transition: all 1s ease-in-out 0.5s;
+        opacity: 1;
+    }
+    & .comming-soon__social {
+        transition: all 1s ease-in-out 0.6s;
+        opacity: 1;
+    }
+    & .comming-soon__email {
+        transition: all 1s ease-in-out 0.7s;
+        opacity: 1;
+    }
+    & .comming-soon__bottom-text {
+        transition: all 1s ease-in-out 0.8s;
+        opacity: 1;
+    }
+
+    .comming-soon__logo, .comming-soon__subtitle, .comming-soon__social, .comming-soon__email, .comming-soon__bottom-text {
+        transform: translateY(0px);
+    }
+}
+
+.comming-soon__logo, .comming-soon__subtitle, .comming-soon__social, .comming-soon__email, .comming-soon__bottom-text {
+    transform: translateY(15px);
+}
+
+.comming-soon {
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        & .swiper {
+            height: 100%;
+        }
+
+        & .swiper-slide {
+            background: #c6c6c6;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background: radial-gradient(52.03% 52.03% at 50% 47.97%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%),
+                rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 180px;
+        padding-bottom: 50px;
+        color: #fff;
+
+        
+        @media (max-width: 1399.98px) {
+            padding-top: 170px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding-top: 90px;
+        }
+
+        & a {
+            color: inherit !important;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 258px;
+        opacity: 0;
+        margin: 0 auto 25px;
+
+        @media (max-width: 1399.98px) {
+            max-width: 191px;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__subtitle {
+        font-size: 38px;
+        line-height: 47px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-shadow: 0px 0px 21px rgba(0, 0, 0, 0.25);
+        margin-bottom: 40px;
+        font-weight: 300;
+        margin-top: auto;
+        opacity: 0;
+
+        @media (max-width: 1399.98px) {
+            font-size: 30px;
+            line-height: 1.23em;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 28px;
+        }
+
+        @media (max-width: 374.98px) {
+            font-size: 24px;
+        }
+    }
+
+    &__social {
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        justify-content: center;
+        gap: 20px;
+        opacity: 0;
+
+        @media (max-width: 1399.98px) {
+            gap: 16px;
+            margin-bottom: 22px;
+        }
+
+        & a {
+            display: block;
+            width: 42px;
+            transition: all 0.3s ease;
+
+            @media (max-width: 1399.98px) {
+                width: 36px;
+            }
+
+            & img {
+                width: 100%;
+                height: auto;
+            }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    &__email {
+        display: inline-block;
+        font-size: 30px;
+        line-height: 38px;
+        text-align: center;
+        margin-bottom: auto;
+        font-weight: 300;
+        opacity: 0;
+
+        @media (max-width: 1399.98px) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &__bottom-text {
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin-top: 40px;
+        font-weight: 300;
+        opacity: 0;
+
+        @media (max-width: 1399.98px) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+}
